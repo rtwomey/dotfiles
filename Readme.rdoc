@@ -1,0 +1,3 @@
+= Dot Files
+
+This is a collection of my various config files. Got the idea from Ryan Bates: https://github.com/ryanb/dotfiles
