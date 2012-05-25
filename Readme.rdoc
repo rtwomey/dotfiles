@@ -7,11 +7,17 @@ To install:
 
   rake install
 
-== Features ==
+== Features
 
 * ZSH
 
-  Uses oh-my-zsh and the "robbyrussel" theme.
+  * Uses oh-my-zsh and the "robbyrussel" theme.
+  * Macro to "reset-db" for a Rails project in one line
 
+* vimrc and gvimrc Files
 
+  Includes intelligent autocompletion
 
+* gitconfig
+
+  The global gitconfig I use, with a number of helpful aliases
