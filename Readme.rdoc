@@ -1,3 +1,17 @@
 = Dot Files
 
-This is a collection of my various config files. Got the idea from Ryan Bates: https://github.com/ryanb/dotfiles
+This is a collection of my various config files. Got the idea from Ryan Bates:
+https://github.com/ryanb/dotfiles
+
+To install:
+
+  rake install
+
+== Features ==
+
+* ZSH
+
+  Uses oh-my-zsh and the "robbyrussel" theme.
+
+
+
