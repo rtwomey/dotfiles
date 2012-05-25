@@ -12,6 +12,7 @@ set nowritebackup
 set list listchars=tab:»·,trail:·
 
 " set display options
+set background=light
 set tabstop=2        " tabs are set to be 2 spaces in width
 set shiftwidth=2
 set expandtab        " insert spaces instead of tabs
