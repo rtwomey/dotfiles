@@ -10,7 +10,7 @@ ZSH_THEME="robbyrussell"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git textmate rails)
+plugins=(git textmate rails ruby github osx rvm)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -20,6 +20,10 @@ export PATH=$PATH:$HOME/.rvm/bin
 
 alias rvm-argos='rvm use ruby-1.9.3-p125@argos'
 alias gitup='git fetch; git remote prune origin'
+
+alias makepvr="/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/texturetool"
+alias github="open \`git config -l | grep 'remote.origin.url' | sed -En \
+  's/remote.origin.url=git(@|:\/\/)github.com(:|\/)(.+)\/(.+).git/https:\/\/github.com\/\3\/\4/p'\`"
 
 alias gs='git status'
 alias gl='git log'
