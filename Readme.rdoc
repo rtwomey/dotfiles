@@ -16,7 +16,10 @@ To install:
 
 * vimrc and gvimrc Files
 
-  Includes intelligent autocompletion
+  * Includes semi-intelligent autocompletion
+  * Light background color with syntax coloring
+  * Spell checking
+  * Rails.vim plugin
 
 * gitconfig
 
