@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/Users/rtwomey/Development/Hosting Clients/Cape Cod Chamber of Commerce/capecodtravel'
+let g:netrw_dirhist_2='/Users/rtwomey/Development/SCVNGR/levelup'
+let g:netrw_dirhist_3='/Users/rtwomey/Development/SCVNGR/levelup/test'
+let g:netrw_dirhist_4='/Users/rtwomey/Development/SCVNGR/levelup/test/unit'
+let g:netrw_dirhist_5='/Users/rtwomey/Development/SCVNGR/levelup'
+let g:netrw_dirhist_6='/Users/rtwomey/Development/SCVNGR/levelup/test'
+let g:netrw_dirhist_7='/Users/rtwomey/Development/SCVNGR/levelup/test/unit'

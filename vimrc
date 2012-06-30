@@ -25,6 +25,7 @@ syntax on            " automatically display files with syntax coloring on
 
 set ruler            " display cursor position while editing
 set noerrorbells     " I hate noise
+set visualbell
 set showcmd          " display incomplete commands
 set incsearch        " do incremental searching
 
