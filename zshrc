@@ -15,8 +15,8 @@ plugins=(git textmate rails ruby github osx rvm)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:~/.bin
 export PATH=$PATH:$HOME/.rvm/bin
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:~/.bin
 
 alias rvm-argos='rvm use ruby-1.9.3-p125@argos'
 alias gitup='git fetch; git remote prune origin'
