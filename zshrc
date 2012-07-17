@@ -19,6 +19,16 @@ alias gitup='git fetch; git remote prune origin'
 alias gs='git status'
 alias gl='git log'
 
+prep-db () {
+  if [[ -f config/database.yml ]]; then
+    echo "RAILS_ENV=development rake db:migrate"
+    RAILS_ENV=development rake db:migrate
+
+    echo "RAILS_ENV=development rake db:test:prepare"
+    RAILS_ENV=development rake db:test:prepare
+  fi
+}
+
 # when in a Rails-like environment, will drop, create, and call pg_restore on ~/database.dump
 reset-db () {
   if [[ -f config/database.yml ]]; then
@@ -31,8 +41,8 @@ reset-db () {
     echo "pg_restore --verbose --clean --no-acl --no-owner -h localhost -U `whoami` -d $DBNAME ~/database.dump"
     pg_restore --verbose --clean --no-acl --no-owner -h localhost -U `whoami` -d $DBNAME ~/database.dump
 
-    echo "rake db:test:prepare"
-    rake db:test:prepare
+    echo "RAILS_ENV=development rake db:test:prepare"
+    RAILS_ENV=development rake db:test:prepare
   else
     echo "Must be in a Rails project to use this command"
   fi
