@@ -56,20 +56,6 @@ endif
 
 filetype plugin on
 
-"augroup myfiletypes
-"  autocmd!
-"  autocmd FileType ruby,eruby,yaml set ai sw=2 sts=2 et
-"augroup END
-
-" context-aware color schemes
-"let &t_Co=256        " tell Vim we actually support 256 colors
-"colo default
-"autocmd! BufEnter,BufNewFile *.rb,*.rake colo beauty256
-"autocmd! BufLeave *.rb,*.rake colo default
-
-" highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-" match OverLength /\%81v.\+/
-
 "folding settings
 set foldmethod=indent   "fold based on indent
 set foldnestmax=10      "deepest fold is 10 levels
