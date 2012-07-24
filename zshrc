@@ -38,8 +38,8 @@ reset-db () {
     RAILS_ENV=development rake db:create
 
     DBNAME="$(basename `pwd`)_development"
-    echo "pg_restore --verbose --clean --no-acl --no-owner -h localhost -U `whoami` -d $DBNAME ~/database.dump"
-    pg_restore --verbose --clean --no-acl --no-owner -h localhost -U `whoami` -d $DBNAME ~/database.dump
+    echo "pg_restore --verbose --clean --no-acl --no-owner -h localhost -U `whoami` -d $DBNAME ~/$DBNAME.dump"
+    pg_restore --verbose --clean --no-acl --no-owner -h localhost -U `whoami` -d $DBNAME ~/$DBNAME.dump
 
     echo "RAILS_ENV=development rake db:test:prepare"
     RAILS_ENV=development rake db:test:prepare
