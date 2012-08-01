@@ -55,7 +55,8 @@ set statusline+=%*
 
 set statusline+=%= "left/right separator
 
-set statusline+=%l/%L "cursor line/total lines
+set statusline+=%4v
+set statusline+=\ %l/%L "cursor line/total lines
 set statusline+=\ %P "percent through file
 set laststatus=2
 
@@ -77,7 +78,7 @@ if version >= 700
   set spl=en spell
   set nospell
 endif
-map ^T :w!<CR>:!aspell check %<CR>:e! %<CR>
+" map ^T :w!<CR>:!aspell check %<CR>:e! %<CR>
 
 " edit the README_FOR_APP (makes :R commands work)
 map <Leader>R :e doc/README_FOR_APP<CR>
