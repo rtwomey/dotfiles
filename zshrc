@@ -11,6 +11,7 @@ source $ZSH/oh-my-zsh.sh
 export PATH=$PATH:$HOME/.rvm/bin
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:~/.bin
 
+alias proxy="ssh -ND 9999 "
 alias makepvr="/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/texturetool"
 alias github="open \`git config -l | grep 'remote.origin.url' | sed -En \
   's/remote.origin.url=git(@|:\/\/)github.com(:|\/)(.+)\/(.+).git/https:\/\/github.com\/\3\/\4/p'\`"
@@ -18,8 +19,14 @@ alias github="open \`git config -l | grep 'remote.origin.url' | sed -En \
 alias gitup='git fetch; git remote prune origin'
 alias gs='git status'
 alias gl='git log'
+alias t="ruby -I test"
+alias rtp='rake test:parallel'
+alias rtps='rake test:parallel_with_specs'
 
-alias proxy='ssh -ND 9999'
+alias hrc='heroku run console --app '
+alias hlt='heroku log -t --app '
+
+alias rtp='rake test:parallel_with_specs'
 
 prep-db () {
   if [[ -f config/database.yml ]]; then
