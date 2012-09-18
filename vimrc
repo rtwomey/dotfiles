@@ -4,6 +4,7 @@ set nocompatible     " turns off system-dependant behavior and sticks with vim b
 
 " see https://github.com/tpope/vim-pathogen
 call pathogen#infect()
+Helptags
 
 " set behavior commands
 set nowrap           " dont wrap long lines
