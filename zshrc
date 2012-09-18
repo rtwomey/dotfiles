@@ -19,6 +19,8 @@ alias gitup='git fetch; git remote prune origin'
 alias gs='git status'
 alias gl='git log'
 
+alias proxy='ssh -ND 9999'
+
 prep-db () {
   if [[ -f config/database.yml ]]; then
     echo "RAILS_ENV=development rake db:migrate"
