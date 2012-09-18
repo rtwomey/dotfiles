@@ -66,6 +66,8 @@ nmap <silent> <c-j> :wincmd j<CR>
 nmap <silent> <c-k> :wincmd k<CR>
 nmap <silent> <c-l> :wincmd l<CR>
 
+nnoremap - :Switch<cr>
+
 " remember last position in a file
 set viminfo='10,\"100,:20,%,n~/.viminfo
 au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
@@ -96,3 +98,7 @@ set foldnestmax=10      " deepest fold is 10 levels
 set nofoldenable        " dont fold by default
 set foldlevel=1         " this is just what i use
 
+let g:fullscreen_colorscheme = "iawriter"
+let g:fullscreen_font = "Cousine:h14"
+let g:normal_colorscheme = "codeschool"
+let g:normal_font="Inconsolata:h14"
