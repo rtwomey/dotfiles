@@ -24,7 +24,7 @@ alias rtp='rake test:parallel'
 alias rtps='rake test:parallel_with_specs'
 
 alias hrc='heroku run console --app '
-alias hlt='heroku log -t --app '
+alias hlt='heroku logs -t --app '
 
 alias rtp='rake test:parallel_with_specs'
 
