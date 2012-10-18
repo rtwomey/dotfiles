@@ -28,6 +28,10 @@ alias hlt='heroku logs -t --app '
 
 alias rtp='rake test:parallel_with_specs'
 
+# use vi-mode
+bindkey -v
+bindkey '^R' history-incremental-search-backward
+
 prep-db () {
   if [[ -f config/database.yml ]]; then
     echo "RAILS_ENV=development rake db:migrate"
@@ -47,8 +51,9 @@ reset-db () {
     RAILS_ENV=development rake db:create
 
     DBNAME="$(basename `pwd`)_development"
-    echo "pg_restore --verbose --clean --no-acl --no-owner -h localhost -U `whoami` -d $DBNAME ~/$DBNAME.dump"
-    pg_restore --verbose --clean --no-acl --no-owner -h localhost -U `whoami` -d $DBNAME ~/$DBNAME.dump
+    CORES=`sysctl -n hw.logicalcpu`
+    echo "pg_restore -j $CORES--verbose --clean --no-acl --no-owner -h localhost -U `whoami` -d $DBNAME ~/$DBNAME.dump"
+    pg_restore -j $CORES --verbose --clean --no-acl --no-owner -h localhost -U `whoami` -d $DBNAME ~/$DBNAME.dump
 
     echo "RAILS_ENV=development rake db:test:prepare"
     RAILS_ENV=development rake db:test:prepare
@@ -59,3 +64,6 @@ reset-db () {
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM
 rvm default
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
