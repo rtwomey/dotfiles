@@ -19,6 +19,9 @@ alias github="open \`git config -l | grep 'remote.origin.url' | sed -En \
 alias gitup='git fetch; git remote prune origin'
 alias gs='git status'
 alias gl='git log'
+alias gpom='git push origin master'
+alias gpos='git push origin staging'
+
 alias t="ruby -I test"
 alias rtp='rake test:parallel'
 alias rtps='rake test:parallel_with_specs'
@@ -28,8 +31,6 @@ alias hlt='heroku logs -t --app '
 
 alias rtp='rake test:parallel_with_specs'
 
-# use vi-mode
-bindkey -v
 bindkey '^R' history-incremental-search-backward
 
 prep-db () {
