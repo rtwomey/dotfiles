@@ -22,14 +22,13 @@ alias gl='git log'
 alias gpom='git push origin master'
 alias gpos='git push origin staging'
 
-alias t="ruby -I test"
+alias t='ruby -I test'
+alias rdm='rake db:migrate'
 alias rtp='rake test:parallel'
 alias rtps='rake test:parallel_with_specs'
 
 alias hrc='heroku run console --app '
 alias hlt='heroku logs -t --app '
-
-alias rtp='rake test:parallel_with_specs'
 
 bindkey '^R' history-incremental-search-backward
 
