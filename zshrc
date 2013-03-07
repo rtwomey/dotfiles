@@ -8,8 +8,9 @@ plugins=(git github osx rails ruby rvm textmate)
 
 source $ZSH/oh-my-zsh.sh
 
-export PATH=$PATH:$HOME/.rvm/bin
+# export PATH=$PATH:$HOME/.rvm/bin
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:~/.bin
+export PATH=$PATH:/usr/local/share/npm/bin
 
 alias proxy="ssh -ND 9999 "
 alias makepvr="/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/texturetool"
@@ -23,22 +24,29 @@ alias gpom='git push origin master'
 alias gpos='git push origin staging'
 
 alias t='ruby -I test'
+alias st='spring test'
 alias rdm='rake db:migrate'
+alias srdm='spring rake db:migrate'
 alias rtp='rake test:parallel'
 alias rtps='rake test:parallel_with_specs'
+alias srtps='spring rake test:parallel_with_specs'
+
+alias us='underscore print --color'
 
 alias hrc='heroku run console --app '
 alias hlt='heroku logs -t --app '
 
+alias rm='trash'
+
 bindkey '^R' history-incremental-search-backward
+
+psgrep () {
+  ps aux | grep -v grep | grep "$1" -i --color=auto
+}
 
 prep-db () {
   if [[ -f config/database.yml ]]; then
-    echo "RAILS_ENV=development rake db:migrate"
-    RAILS_ENV=development rake db:migrate
-
-    echo "RAILS_ENV=development rake db:test:prepare"
-    RAILS_ENV=development rake db:test:prepare
+    rake db:migrate && (rake db:test:prepare ; rake parallel:prepare)
   fi
 }
 
