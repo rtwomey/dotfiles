@@ -12,17 +12,20 @@ source $ZSH/oh-my-zsh.sh
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:~/.bin
 export PATH=$PATH:/usr/local/share/npm/bin
 
+export AWS_CREDENTIAL_FILE=~/.aws/credentials
+
 alias proxy="ssh -ND 9999 "
 alias makepvr="/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/texturetool"
 alias github="open \`git config -l | grep 'remote.origin.url' | sed -En \
   's/remote.origin.url=git(@|:\/\/)github.com(:|\/)(.+)\/(.+).git/https:\/\/github.com\/\3\/\4/p'\`"
 
 alias gitup='git fetch; git remote prune origin'
-alias gs='git status'
 alias gl='git log'
 alias gpom='git push origin master'
 alias gpos='git push origin staging'
+alias gs='git status'
 
+alias fs='foreman start'
 alias t='ruby -I test'
 alias st='spring test'
 alias rdm='rake db:migrate'
@@ -35,6 +38,9 @@ alias us='underscore print --color'
 
 alias hrc='heroku run console --app '
 alias hlt='heroku logs -t --app '
+
+alias heroku='nocorrect heroku'
+alias rspec='nocorrect rspec'
 
 alias rm='trash'
 
