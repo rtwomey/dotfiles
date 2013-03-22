@@ -11,8 +11,13 @@ source $ZSH/oh-my-zsh.sh
 # export PATH=$PATH:$HOME/.rvm/bin
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:~/.bin
 export PATH=$PATH:/usr/local/share/npm/bin
+export PATH=$PATH:$HOME/.aws/AWS-ElasticBeanstalk-CLI-2.2/eb/macosx/python2.7
+export PATH=$PATH:$HOME/.aws/AWS-ElasticBeanstalk-CLI-2.2/api/bin
+export PATH=$PATH:$HOME/.aws/IAMCli-1.5.0/bin
 
 export AWS_CREDENTIAL_FILE=~/.aws/credentials
+export JAVA_HOME=`/usr/libexec/java_home -v 1.6`
+export AWS_IAM_HOME=$HOME/.aws/IAMCli-1.5.0
 
 alias proxy="ssh -ND 9999 "
 alias makepvr="/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/texturetool"
@@ -81,3 +86,5 @@ rvm default
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scriptin
