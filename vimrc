@@ -102,6 +102,12 @@ let g:fullscreen_font = "Cousine:h14"
 let g:normal_colorscheme = "codeschool"
 let g:normal_font="Inconsolata:h14"
 
+" Silver Searcher - related commands
+" \ to search in a quick fix window
+nnoremap \ :Ag<SPACE>
+" K while cursor is over a word to search for that word
+nnoremap K :Ag "\b<C-R><C-W>\b"<CR>:cw<CR>
+
 " SortWords (see: http://stackoverflow.com/a/1328392/1264925)
 function! SortWords()
   " Get the visual mark points
