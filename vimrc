@@ -98,6 +98,7 @@ set nofoldenable        " dont fold by default
 set foldlevel=1         " this is just what i use
 
 set relativenumber
+set lazyredraw      " relativenumber makes scrolling slow, but this helps
 
 let g:fullscreen_colorscheme = "iawriter"
 let g:fullscreen_font = "Cousine:h14"
