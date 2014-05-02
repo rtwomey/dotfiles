@@ -84,11 +84,6 @@ endif
 " edit the README_FOR_APP (makes :R commands work)
 map <Leader>R :e doc/README_FOR_APP<CR>
 
-" use Ack instead of Grep when available
-if executable("ack")
-  set grepprg=ack\ -H\ --nogroup\ --nocolor
-endif
-
 filetype plugin on
 
 " folding settings
@@ -100,8 +95,10 @@ set foldlevel=1         " this is just what i use
 set relativenumber
 set lazyredraw      " relativenumber makes scrolling slow, but this helps
 
-let g:fullscreen_colorscheme = "iawriter"
-let g:fullscreen_font = "Cousine:h14"
+set tw=100
+
+" let g:fullscreen_colorscheme = "iawriter"
+" let g:fullscreen_font = "Cousine:h14"
 let g:normal_colorscheme = "codeschool"
 let g:normal_font="Inconsolata:h14"
 

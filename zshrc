@@ -8,6 +8,9 @@ plugins=(git github osx rails ruby textmate zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
+setopt autocd
+cdpath=($HOME/PlateJoy $HOME/Development)
+
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:~/.bin
 export PATH=$PATH:/usr/local/share/npm/bin
 
@@ -41,6 +44,10 @@ alias heroku='nocorrect heroku'
 alias rspec='nocorrect rspec'
 
 alias rm='trash'
+
+# makegreatthings.com octopress blog
+alias regen='bundle exec rake generate'
+alias deploy='git push heroku makegreatthings.com:master'
 
 bindkey '^R' history-incremental-search-backward
 
@@ -78,6 +85,9 @@ reset-db () {
 zstyle :compinstall filename '/Users/rtwomey/.zshrc'
 autoload -Uz compinit
 compinit
+
+# Docker
+DOCKER_HOST=tcp://localhost:4243
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"

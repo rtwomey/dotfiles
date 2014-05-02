@@ -25,3 +25,6 @@
 [submodule "vim/bundle/vimux"]
 	path = vim/bundle/vimux
 	url = git@github.com:benmills/vimux.git
+[submodule "vim/bundle/vim-elixir"]
+	path = vim/bundle/vim-elixir
+	url = git@github.com:elixir-lang/vim-elixir.git
