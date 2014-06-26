@@ -36,7 +36,7 @@ set hlsearch         " highlight all search results
 set laststatus=2
 set statusline=%f
 
-"display a warning if file encoding isnt utf-8
+" display a warning if file encoding isnt utf-8
 set statusline+=%#warningmsg#
 set statusline+=%{(&fenc!='utf-8'&&&fenc!='')?'['.&fenc.']':''}
 set statusline+=%*
@@ -49,7 +49,7 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-"display a warning if &paste is set
+" display a warning if &paste is set
 set statusline+=%#error#
 set statusline+=%{&paste?'[paste]':''}
 set statusline+=%*
@@ -97,8 +97,6 @@ set lazyredraw      " relativenumber makes scrolling slow, but this helps
 
 set tw=100
 
-" let g:fullscreen_colorscheme = "iawriter"
-" let g:fullscreen_font = "Cousine:h14"
 let g:normal_colorscheme = "codeschool"
 let g:normal_font="Inconsolata:h14"
 
