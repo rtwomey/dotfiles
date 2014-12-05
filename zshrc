@@ -57,7 +57,7 @@ psgrep () {
 
 prep-db () {
   if [[ -f config/database.yml ]]; then
-    rake db:migrate && (rake db:test:prepare ; rake parallel:prepare)
+    rake db:migrate && rake db:test:prepare
   fi
 }
 
@@ -73,6 +73,12 @@ reset-db () {
     CORES=`sysctl -n hw.logicalcpu`
     echo "pg_restore -j $CORES--verbose --clean --no-acl --no-owner -h localhost -U `whoami` -d $DBNAME ~/$DBNAME.dump"
     pg_restore -j $CORES --verbose --clean --no-acl --no-owner -h localhost -U `whoami` -d $DBNAME ~/$DBNAME.dump
+
+    echo "RAILS_ENV=development rake db:migrate"
+    RAILS_ENV=development rake db:migrate
+
+    echo "RAILS_ENV=development rake jobs:clear"
+    RAILS_ENV=development rake jobs:clear
 
     echo "RAILS_ENV=development rake db:test:prepare"
     RAILS_ENV=development rake db:test:prepare
