@@ -10,15 +10,9 @@
 [submodule "vim/bundle/snipmate.vim"]
 	path = vim/bundle/snipmate.vim
 	url = git://github.com/msanders/snipmate.vim.git
-[submodule "vim/bundle/vim-surround"]
-	path = vim/bundle/vim-surround
-	url = git://github.com/tpope/vim-surround.git
 [submodule "vim/bundle/vim-coffee-script"]
 	path = vim/bundle/vim-coffee-script
 	url = git://github.com/kchmck/vim-coffee-script.git
-[submodule "vim/bundle/vim-slim"]
-	path = vim/bundle/vim-slim
-	url = git://github.com/bbommarito/vim-slim.git
 [submodule "vim/bundle/ag"]
 	path = vim/bundle/ag
 	url = https://github.com/rking/ag.vim
@@ -31,3 +25,15 @@
 [submodule "vim/bundle/supertab"]
 	path = vim/bundle/supertab
 	url = https://github.com/ervandew/supertab
+[submodule "vim/bundle/vim-surround"]
+	path = vim/bundle/vim-surround
+	url = git://github.com/tpope/vim-surround.git
+[submodule "vim/bundle/vim-slim"]
+	path = vim/bundle/vim-slim
+	url = git://github.com/slim-template/vim-slim.git
+[submodule "vim/bundle/vim-swift"]
+	path = vim/bundle/vim-swift
+	url = git://github.com/toyamarinyon/vim-swift.git
+[submodule "vim/bundle/vim-ios"]
+	path = vim/bundle/vim-ios
+	url = https://github.com/eraserhd/vim-ios.git
