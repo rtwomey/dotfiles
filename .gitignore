@@ -2,3 +2,4 @@ vim/.netrwhist
 tmp/tags
 *.swp
 **/doc/tags*
+vim/backup/*~

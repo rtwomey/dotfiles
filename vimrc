@@ -8,7 +8,8 @@ Helptags
 
 " set behavior commands
 set nowrap           " dont wrap long lines
-set nobackup         " turn off file backups
+set backup           " turn on file backups
+set backupdir=~/.vim/backup
 set nowritebackup
 set splitright
 set list listchars=tab:»·,trail:·
